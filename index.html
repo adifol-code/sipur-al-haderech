@@ -345,7 +345,7 @@ function playDrive(n) {
     playingState[n] = true;
   }
 }
-const MAP_URL='https://www.google.com/maps';
+const MAP_URL='https://www.google.com/maps/d/u/0/embed?mid=1p08F5EC7qkssYiO7ymL8cL0H3_oOSzU';
 const STATIONS=[{id:1,lat:32.0633,lng:34.7739},{id:2,lat:32.0640,lng:34.7728},{id:3,lat:32.0780,lng:34.7739},{id:4,lat:32.0651,lng:34.7762},{id:5,lat:32.0720,lng:34.7745}];
 let current=0;
 function goTo(n){const f=document.getElementById('s'+current);if(f)f.classList.add('hidden');const t=document.getElementById('s'+n);t.classList.remove('hidden');t.scrollTop=0;current=n;}
