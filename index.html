@@ -367,5 +367,16 @@ function doInstall(){if(!deferredPrompt)return;deferredPrompt.prompt();deferredP
 function closeInstall(){document.getElementById('installBanner').classList.remove('show');}
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
-</body>
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('show')">
+<img id="lightbox-img" src="">
+</div>
+<script>
+document.querySelectorAll('.page img').forEach(img=>{
+  img.style.cursor='pointer';
+  img.addEventListener('click',()=>{
+    document.getElementById('lightbox-img').src=img.src;
+    document.getElementById('lightbox').classList.add('show');
+  });
+});
+</script></body>
 </html>
